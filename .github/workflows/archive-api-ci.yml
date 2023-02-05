@@ -26,10 +26,12 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Build Docker Image
-      uses: docker/build-push-action@v2
-      with:
-        registry: ghcr.io
-        username: ${{ secrets.GHRC_USERNAME}}
-        password: ${{ secrets.GHRC_PASSWORD}}
-        repository: mbalonek/archiver-app
-        tags: latest
+      run: docker build . --file Dockerfile --tag $IMAGE_NAME
+      
+    - name: Log into GHCR
+      run: echo "${{ secrets.CI_CD_REPO_TOKEN }}" | docker login https://ghcr.io -u ${{ github.actor }} --password-stdin
+      
+    - name Push image to GHCR
+      run: |
+      IMAGE_ID=ghcr.io/{{github.repository_owner}}/IMAGE_NAME:${{ github.run_id }}
+        docker push $IMAGE_ID

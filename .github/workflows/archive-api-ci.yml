@@ -33,6 +33,6 @@ jobs:
       
     - name: Push image to GHCR
       run: |
-        IMAGE_ID=ghcr.io/${{github.repository_owner}}/archiver-api
+        IMAGE_ID=ghcr.io/${{github.repository_owner}}/archiver-api:latest
         docker tag archiver-api:latest
-        docker push $IMAGE_ID
+        docker image push archiver-api:latest $IMAGE_ID

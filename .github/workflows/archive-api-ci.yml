@@ -13,6 +13,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+      packages: write
+    
     steps:
     - name: Build:checkout
       uses: actions/checkout@v3

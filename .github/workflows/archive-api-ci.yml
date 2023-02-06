@@ -26,7 +26,7 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Build Docker Image
-      run: docker build .
+      run: docker build . --tag ghcr.io/${{github.repository_owner}}/archiver-api:latest
       
     - name: Log into GHCR
       run: echo "${{ secrets.CI_CD_REPO_TOKEN }}" | docker login https://ghcr.io -u ${{ github.actor }} --password-stdin
@@ -34,4 +34,5 @@ jobs:
     - name: Push image to GHCR
       run: |
         IMAGE_ID=ghcr.io/${{github.repository_owner}}/archiver-api
+        docker tag archiver-api:latest
         docker push $IMAGE_ID

@@ -45,7 +45,7 @@ jobs:
   #  run: docker build . --tag archiver-api:latest
       
   #  - name: Log into GHCR
-   #   run: echo "${{ secrets.CI_CD_REPO_TOKEN }}" | docker login https://ghcr.io -u ${{ github.actor }} --password-stdin
+   #   run: echo "${{ secrets.ARCHIVER_TOKEN }}" | docker login https://ghcr.io -u ${{ github.actor }} --password-stdin
       
     #- name: Push image to GHCR
      # run: |

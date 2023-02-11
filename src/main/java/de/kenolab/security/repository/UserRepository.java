@@ -1,6 +1,6 @@
-package de.kenolab.repository;
+package de.kenolab.security.repository;
 
-import de.kenolab.entity.ArchiveUser;
+import de.kenolab.security.entity.ArchiveUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

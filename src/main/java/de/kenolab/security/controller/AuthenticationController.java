@@ -1,6 +1,6 @@
 package de.kenolab.security.controller;
 
-import de.kenolab.entity.ArchiveUser;
+import de.kenolab.security.entity.ArchiveUser;
 import de.kenolab.security.config.AuthenticationService;
 import de.kenolab.security.config.UserAuthenticationProvider;
 import de.kenolab.security.dto.AuthRequest;

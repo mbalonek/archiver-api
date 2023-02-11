@@ -1,4 +1,4 @@
-package de.kenolab.entity;
+package de.kenolab.security.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

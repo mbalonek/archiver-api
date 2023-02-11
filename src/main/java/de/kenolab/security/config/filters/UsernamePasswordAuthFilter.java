@@ -1,7 +1,7 @@
 package de.kenolab.security.config.filters;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import de.kenolab.entity.ArchiveUser;
+import de.kenolab.security.entity.ArchiveUser;
 import de.kenolab.security.config.UserAuthenticationProvider;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

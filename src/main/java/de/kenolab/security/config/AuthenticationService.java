@@ -1,7 +1,7 @@
 package de.kenolab.security.config;
 
-import de.kenolab.entity.ArchiveUser;
-import de.kenolab.repository.UserRepository;
+import de.kenolab.security.entity.ArchiveUser;
+import de.kenolab.security.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

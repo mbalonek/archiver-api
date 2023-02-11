@@ -1,4 +1,4 @@
-package de.kenolab.entity;
+package de.kenolab.security.entity;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.*;
